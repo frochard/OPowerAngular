@@ -24,20 +24,30 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/user', {
-        templateUrl: 'views/user.html',
-        controller: 'UserCtrl',
-        controllerAs: 'user'
+      .when('/homes', {
+        templateUrl: 'views/homes.html',
+        controller: 'HomesCtrl',
+        controllerAs: 'Homes'
       })
       .when('/person', {
         templateUrl: 'views/person.html',
         controller: 'PersonCtrl',
         controllerAs: 'person'
+      })
+      .when('/heater', {
+        templateUrl: 'views/heater.html',
+        controller: 'HeaterCtrl',
+        controllerAs: 'heater'
+      })
+      .when('/electronic_devices', {
+        templateUrl: 'views/electronic_devices.html',
+        controller: 'ElectronicDevicesCtrl',
+        controllerAs: 'ElectronicDevices'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
