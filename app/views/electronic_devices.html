@@ -1,0 +1,39 @@
+<div>
+
+  <div text-align: center; xmlns:text-align="http://www.w3.org/1999/xhtml">
+
+    <h1>OPower electronic devices</h1>
+
+    <div>
+      <form ng-submit="addElectronic_devices()">
+        <label>Name : </label>
+        <input type="text" ng-model="electronic_devices.name" id="name">
+        <br>
+        <label>Average cons : </label>
+        <input type="number" ng-model="electronic_devices.avgCons" id="avgCons">
+        <br>
+        <input class="btn btn-primary" type="submit" id="submit" value="Add electronic devices"/>
+      </form>
+    </div>
+
+    <table BORDER="1" class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>avgCons</td>
+        <td>home</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="line in APIList">
+        <td>{{ line.id }}</td>
+        <td>{{ line.name }}</td>
+        <td>{{ line.avgCons }}</td>
+        <td>{{ line.home }}</td>
+        <td><a href="#/electronic_devices" ng-click="removeElectronic_devices(line.id)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

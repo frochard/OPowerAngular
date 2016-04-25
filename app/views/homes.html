@@ -1,0 +1,44 @@
+<div>
+  <div text-align: center; xmlns:text-align="http://www.w3.org/1999/xhtml">
+    <h1>OPower Homes</h1>
+    <div>
+      <form ng-submit="addHome()">
+        <label>Name : </label>
+        <input type="text" ng-model="home.name" id="name">
+        <br>
+        <label>Size : </label>
+        <input type="number" ng-model="home.size" id="size">
+        <br>
+        <label>Nb rooms : </label>
+        <input type="number" ng-model="home.nbRoom" id="nbRoom">
+        <br>
+        <input class="btn btn-primary" type="submit" id="submit" value="Add home"/>
+      </form>
+    </div>
+
+    <table BORDER="1" class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>size</td>
+        <td>nb room</td>
+        <td>Heaters</td>
+        <td>Elec devices</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="line in APIList">
+        <td>{{ line.id }}</td>
+        <td>{{ line.name }}</td>
+        <td>{{ line.size }}</td>
+        <td>{{ line.nbRoom }}</td>
+        <td>{{ line.heaters }}</td>
+        <td>{{ line.electronicDevices }}</td>
+        <td><a href="#/homes" ng-click="removeHome(line.id)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
